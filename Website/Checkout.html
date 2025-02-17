@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Celtec Games</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="checkout-styles.css">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <div class="container">
+	<header>
+		<div class="left-section">
+			<a href="Index.html"><img src="Images/Logo1.jpg" alt="Logo" width="275"></a>
+		</div>
+		<div class="right-section">
+			<a href="https://www.facebook.com"><img class="social-icon" img src="Images/facebook-icon.jpg" alt="Facebook" width="75"></a>
+			<a href="https://www.instagram.com"><img class="social-icon" img src="Images/insta-icon.jpg" alt="Instagram" width="75"></a>
+			<a href="https://www.twitter.com"><img class="social-icon" img src="Images/twitter-icon.jpg" alt="Twitter" width="75"></a>
+			<a href="https://www.youtube.com"><img class="social-icon" img src="Images/youtube-icon.jpg" alt="YouTube" width="75"></a>
+			<a href="https://www.twitch.com"><img class="social-icon" img src="Images/twitch-icon.jpg" alt="Twitch" width="75"></a>
+		</div>
+	</header>
+
+  <nav>
+      <ul>
+		<li><a href="Index.html">Home</a>
+          <li><a href="Games.html">Games</a></li>
+          <li><a href="AboutUs.html">About Us</a></li>
+          <li><a href="Blog.html">Blog</a></li>
+          <li><a href="Store.html">Store</a></li>
+      </ul>
+  </nav>
+
+  <section id="checkout">
+	<h2 class="section-title">
+		<i class='bx bx-cart' id="trolley-icon"></i>
+		Checkout
+	</h2>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var urlParams = new URLSearchParams(window.location.search);
+        var totalPrice = urlParams.get('total');
+        var totalPriceElement = document.getElementById("total-price");
+        totalPriceElement.textContent = totalPrice;
+
+        // Retrieve cart details from local storage
+        var storedProducts = localStorage.getItem("cartProducts");
+        if (storedProducts) {
+          var products = JSON.parse(storedProducts);
+          var cartItemsElement = document.getElementById("cart-items");
+
+          // Loop through the products and create the HTML for each item
+          products.forEach(function(product) {
+            var cartItemElement = document.createElement("div");
+            cartItemElement.classList.add("cart-box");
+
+            var productImageElement = document.createElement("img");
+            productImageElement.src = product.image;
+            productImageElement.classList.add("cart-img");
+            cartItemElement.appendChild(productImageElement);
+
+            var detailBoxElement = document.createElement("div");
+            detailBoxElement.classList.add("detail-box");
+
+            var productTitleElement = document.createElement("div");
+            productTitleElement.textContent = product.title;
+            productTitleElement.classList.add("cart-product-title");
+            detailBoxElement.appendChild(productTitleElement);
+
+            var productPriceElement = document.createElement("div");
+            productPriceElement.textContent = product.price;
+            productPriceElement.classList.add("cart-price");
+            detailBoxElement.appendChild(productPriceElement);
+
+            var productQuantityElement = document.createElement("div");
+            productQuantityElement.textContent = product.quantity; // Retrieve quantity from stored data
+            productQuantityElement.classList.add("cart-quantity");
+            detailBoxElement.appendChild(productQuantityElement);
+
+            cartItemElement.appendChild(detailBoxElement);
+
+            cartItemsElement.appendChild(cartItemElement);
+          });
+        }
+
+        // Get the form element
+        var form = document.querySelector("form");
+
+        // Add a submit event listener to the form
+        form.addEventListener("submit", function(event) {
+          // Prevent the default form submission
+          event.preventDefault();
+
+          // Validate each input field
+          var inputs = form.querySelectorAll("input");
+          var isValid = true;
+
+          inputs.forEach(function(input) {
+            if (input.value.trim() === "" && !input.classList.contains("optional")) {
+              input.classList.add("error");
+              isValid = false;
+            } else {
+              input.classList.remove("error");
+            }
+          });
+
+          if (!isValid) {
+            alert("Please fill in all required fields.");
+            return; // Exit the event listener function
+          }
+
+          // Check the date of birth for age validation
+          var day = parseInt(document.getElementById("day").value);
+          var month = parseInt(document.getElementById("month").value);
+          var year = parseInt(document.getElementById("year").value);
+          var currentDate = new Date();
+          var minimumDate = new Date(
+            currentDate.getFullYear() - 18,
+            currentDate.getMonth(),
+            currentDate.getDate()
+          );
+
+          var selectedDate = new Date(year, month - 1, day);
+
+          if (selectedDate > minimumDate) {
+            // Date of birth indicates the user is under 18
+            alert("You must be at least 18 years old to proceed.");
+            return; // Exit the event listener function
+          }
+
+          // Get the card number input element
+          var cardNumberInput = document.getElementById('card-number');
+
+          // Remove any non-digit characters from the input value
+          var sanitizedValue = cardNumberInput.value.replace(/\D/g, '');
+
+          // Update the input value with the sanitized value
+          cardNumberInput.value = sanitizedValue;
+
+          // Restrict the input length to 16 digits
+          if (cardNumberInput.value.length !== 16) {
+            cardNumberInput.classList.add("error");
+            isValid = false;
+            alert("Please enter a 16-digit card number.");
+            return; // Exit the event listener function
+          }
+
+          // If all fields are filled, the user is at least 18, and the card number is 16 digits, submit the form
+          form.submit();
+        });
+
+        // Add an input event listener to the postcode input field
+        var postcodeInput = document.querySelector("input[placeholder='Postcode']");
+        postcodeInput.addEventListener("input", function() {
+          this.value = this.value.toUpperCase();
+        });
+      });
+    </script>
+  
+    <div class="checkout-grid-container">
+      <div class="checkout-cart">
+        <h2 class="checkout-cart-title">Order Summary</h2>
+  
+        <div id="cart-items"></div>
+  
+        <h2 class="checkout-total">Total Price: <span id="total-price"></span></h2>
+      </div>
+  
+      <div class="form-container">
+        <div class="checkout-heading">
+          <h2 class="form-heading">Payment Details</h2>
+        </div>
+        <form action="Purchase.html">
+  
+          <div class="row">
+            <div class="col">
+              <h3 class="title">billing address</h3>
+              <div class="inputBox">
+                <span>full name :</span>
+                <input type="text" placeholder="Enter your Name">
+              </div>
+              <div class="inputBox">
+                <span>email :</span>
+                <input type="email" placeholder="example@example.com">
+              </div>
+              <div class="inputBox">
+                <span>date of birth :</span>
+                <div class="date-input">
+                  <input type="number" id="day" placeholder="DD" min="1" max="31">
+                  <input type="number" id="month" placeholder="MM" min="1" max="12">
+                  <input type="number" id="year" placeholder="YYYY" min="1920" max="2023">
+                </div>
+              </div>
+              <div class="inputBox">
+                <span>Phone Number :</span>
+                <input type="tel" placeholder="(Optional)" class="optional">
+              </div>
+              <div class="inputBox">
+                <span>address :</span>
+                <input type="text" placeholder="House / Flat Number, Street">
+              </div>
+              <div class="inputBox">
+                <span>city :</span>
+                <input type="text" placeholder="">
+              </div>
+              <div class="inputBox">
+                <div class="county-post">
+                <span>county / state :</span>
+                  <div class="postc">
+                    <span>postcode :</span>
+                  </div>
+                </div>
+                <div class="address-input">
+                  <input type="text" placeholder="">
+                  <input type="text" placeholder="" minlength="5" maxlength="8" oninput="this.value = this.value.toUpperCase()">
+                </div>
+              </div>
+            </div>
+  
+            <div class="col">
+              <h3 class="title">payment</h3>
+              <div class="inputBox">
+                <span>cards accepted :</span>
+                <img src="images/card_img.png" alt="">
+              </div>
+              <div class="inputBox">
+                <span>account holder name :</span>
+                <input type="text" placeholder="Name As It Appears On Card">
+              </div>
+              <div class="inputBox">
+                <span>card number :</span>
+                <input type="text" inputmode="numeric" id="card-number" placeholder="0000 0000 0000 0000" maxlength="16">
+              </div>
+              <div class="inputBox">
+                <span>expiry month :</span>
+                <input type="number" placeholder="MM" min="1" max="12">
+              </div>
+              <div class="inputBox">
+                <span>expiry year :</span>
+                <input type="number" placeholder="YYYY" min="2023" max="2033">
+              </div>
+              <div class="inputBox">
+                <span>CVV :</span>
+                <input type="password" placeholder="&#9679;&#9679;&#9679;">
+              </div>
+            </div>
+          </div>
+          <input type="submit" value="Confirm Payment" class="submit-btn">
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+  <div class="foot">
+    <p>&copy; Celtec Games 2023. All rights reserved.</p>
+  </div>
+  </footer>
+  
+  </div>
+</body>
+</html>
