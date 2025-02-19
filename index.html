@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Celtec Games</title>
+	<title>Cyber Warriors</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="./Styling/style.css">
+	<link rel="stylesheet" href="./Styling/styleSlides.css">
 	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
@@ -23,13 +24,20 @@
 		</div>
 	</header>
 
+	<!-- hrefs need to be updated 
+	New Directory:
+		- Index
+		- SubPage Directory
+			- The rest of the pages 
+	-->
+
     <nav>
         <ul>
-			<li><a class="active" href="index.html">This page</a></li>
-            <li><a href="Games.html">Page 2</a></li>
-            <li><a href="AboutUs.html">Page 3</a></li>
-            <li><a href="Blog.html">Page 4</a></li>
-            <li><a href="Store.html">Page 5</a></li>
+			<li><a class="active" href=".">Welcome</a></li>
+            <li><a href="./Subpages/AboutUs.html">About Us</a></li>
+            <li><a href="./Subpages/AboutUs.html">Contact Us</a></li>
+            <li><a href="./Subpages/Games.html">Page 4</a></li>
+            <li><a href="./Subpages/Store.html">Page 5</a></li>
         </ul>
     </nav>
 
@@ -43,136 +51,88 @@
 			<div class="slides">
 				<input type="radio" name="radio-btn" id="radio1">
 				<input type="radio" name="radio-btn" id="radio2">
-				<input type="radio" name="radio-btn" id="radio3">
+				<!-- <input type="radio" name="radio-btn" id="radio3">
 				<input type="radio" name="radio-btn" id="radio4">
-				<input type="radio" name="radio-btn" id="radio5">
+				<input type="radio" name="radio-btn" id="radio5"> -->
 
 				<div class="slide first">
-					<img class="slide1" src="Images/blank.jpg" alt="slide1" max width="700">
-						<div class="slide1-text">
-							<h2>Slide 1 heading</h2>
-							<p>Text</p>
-							<div>
-								<a href="Games.html"><button class="slide-button" type="button">Button Text</button></a>
-							</div>
+					<img class="slideImg" src="Images/blank.jpg" alt="slide1">
+					<div class="slideText">
+						<h2>Slide 1 heading</h2>
+						<p>Text</p>
+						<div>
+							<a href="Games.html"><button class="slide-button" type="button">Button Text</button></a>
 						</div>
+					</div>
+				</div>
+				
+				<div class="slide">
+					<img class="slideImg" src="Images/blank.jpg" alt="slide2">
+					<div class="slideText">
+						<h2>Slide 2 heading</h2>
+						<p>Text</p>
+						<div>
+							<a href="Blog.html"><button class="slide-button" type="button">Button Text</button></a>
+						</div>
+					</div>
+				</div>
+				<!--
+				<div class="slide three">
+					<img class="slideImg" src="Images/blank.jpg" alt="slide3">
+					<div class="slideText">
+						<h2>Slide 3 heading</h2>
+						<h3>Text</h3>
+						<p>Additional Text<br>more text</p>
+						<div>
+							<a href="Store.html"><button class="slide-button" type="button">Button Text</button></a>
+						</div>
+					</div>
 				</div>
 
-				<div class="slide">
-					<img class="slide2" src="Images/blank.jpg" alt="slide2" max width="700" height="442">
-						<div class="slide2-text">
-							<h2>Slide 2 heading</h2>
-							<p>Text</p>
-							<div>
-								<a href="Blog.html"><button class="slide-button" type="button">Button Text</button></a>
-							</div>
+				<div class="slide four">
+					<img class="slideImg" src="Images/blank.jpg" alt="slide3">
+					<div class="slideText">
+						<h2>Slide 4 heading</h2>
+						<h3>Text</h3>
+						<p>Additional Text</p>
+						<div>
+							<a href="Store.html"><button class="slide-button" type="button">Button Text</button></a>
 						</div>
+					</div>
 				</div>
 
-				<div class="slide">
-					<img class="slide3" src="Images/blank.jpg" alt="slide3" max width="700" height="442">
-						<div class="slide3-text">
-							<h2>Slide 3 heading</h2>
-							<h3>Text</h3>
-							<p>Additional Text<br>more text</p>
-							<div>
-								<a href="Store.html"><button class="slide-button" type="button">Button Text</button></a>
-							</div>
+				<div class="slide five">
+					<img class="slideImg" src="Images/blank.jpg" alt="slide4">
+					<div class="slideText">
+						<h2>Slide 5 heading</h2>
+						<p>Text</p>
+						<div>
+							<a href="AboutUs.html"><button class="slide-button"type="button">Button Text</button></a>
 						</div>
-				</div>
-
-				<div class="slide">
-					<img class="slide4" src="Images/blank.jpg" alt="slide3" max width="700" height="442">
-						<div class="slide4-text">
-							<h2>Slide 4 heading</h2>
-							<h3>Text</h3>
-							<p>Additional Text</p>
-							<div>
-								<a href="Store.html"><button class="slide-button" type="button">Button Text</button></a>
-							</div>
-						</div>
-				</div>
-
-				<div class="slide">
-					<img class="slide5" src="Images/blank.jpg" alt="slide4" max width="700" height="442">
-						<div class="slide5-text">
-							<h2>Slide 5 heading</h2>
-							<p>Text</p>
-							<div>
-								<a href="AboutUs.html"><button class="slide-button"type="button">Button Text</button></a>
-							</div>
-						</div>
-				</div>
+					</div>
+				</div> -->
 				
 				<input type="radio" name="radio-btn" id="radio1" checked>
 
 				<div class="navigation-auto">
 					<div class="auto-btn1"></div>
 					<div class="auto-btn2"></div>
-					<div class="auto-btn3"></div>
+					<!-- <div class="auto-btn3"></div>
 					<div class="auto-btn4"></div>
-					<div class="auto-btn5"></div>
+					<div class="auto-btn5"></div> -->
 				</div>
 
 			</div>
 			<div class="navigation-manual">
 				<label for="radio1" class="manual-btn"></label>
 				<label for="radio2" class="manual-btn"></label>
-				<label for="radio3" class="manual-btn"></label>
+				<!-- <label for="radio3" class="manual-btn"></label>
 				<label for="radio4" class="manual-btn"></label>
-				<label for="radio5" class="manual-btn"></label>
+				<label for="radio5" class="manual-btn"></label> -->
 			</div>
 		</div>
 
-		<script type="text/javascript">
-		const manualButtons = document.querySelectorAll('.manual-btn');
-
-		// Add click event listeners to manual navigation buttons
-		manualButtons.forEach(btn => {
-		btn.addEventListener('click', () => {
-			// Update the checked property of the corresponding radio input
-			const radioId = btn.getAttribute('data-slide');
-			document.getElementById(radioId).checked = true;
-		});
-		});
-
-		// Function to simulate automatic navigation
-		function autoNavigate() {
-		// Get the currently checked radio input
-		const checkedRadio = document.querySelector('input[name="radio-btn"]:checked');
-
-		// Get the next radio input or the first one if the last one is checked
-		const nextRadio = checkedRadio.nextElementSibling || document.getElementById('radio1');
-
-		// Update the checked property of the next radio input
-		nextRadio.checked = true;
-
-		// Trigger a click event on the next radio input to transition to the next slide
-		nextRadio.click();
-		}
-
-		// Call the autoNavigate function every 5 seconds (5000 milliseconds)
-		setInterval(autoNavigate, 5000);
-
-		window.addEventListener('load', function() {
-		document.getElementById('radio1').checked = true;
-		document.getElementById('radio1').click();
-		});
-
-		// Add event listener to reset slideshow after last slide has finished
-		const slides = document.querySelector('.slides');
-		slides.addEventListener('transitionend', function() {
-		const lastRadio = document.getElementById('radio5');
-		if (lastRadio.checked) {
-			// If last slide is finished, delay reset to the first slide by 5 seconds (5000 milliseconds)
-			setTimeout(() => {
-			document.getElementById('radio1').checked = true;
-			document.getElementById('radio1').click();
-			}, 5000);
-		}
-		});
-		</script>
-
+		<script type="text/javascript" src="./Script/Slides.js"></script>
 		<section id="featured">
 			<h2>Heading</h2>
 		</section>
