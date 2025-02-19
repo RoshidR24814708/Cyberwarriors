@@ -202,15 +202,14 @@ h2, h3, h4, p {
 	height: 500px;
 }
 
-.slide1 {
+.slideImage {
 	position: absolute;
-	opacity: 0.7;
+	opacity: 0.75;
 }
 
-.slide1-text {
-	position: absolute;
-	margin-left: 2px;
-	margin-top: 80px;
+.slideText {
+	margin: auto;
+	height: auto;
 	padding: 60px;
 	color: #fff;
 	text-align: center;
@@ -225,6 +224,7 @@ h2, h3, h4, p {
 	font-size: 18px;
 	margin-top: 10px;
 	margin-bottom: 0px;
+	width: auto;
 }
 
 .slide2 {
@@ -318,10 +318,10 @@ h2, h3, h4, p {
 	opacity: 0.7;
 }
 
-.slide5-text {
-	position: absolute;
-	margin-left: 60px;
-    margin-right: 50px;
+.slideText {
+	/* position: absolute; */
+	width: auto;
+	margin: auto;
 	margin-top: 80px;
 	padding: 60px;
 	color: #fff;

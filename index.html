@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Celtec Games</title>
+	<title>Cyber Warriors</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
@@ -25,9 +25,9 @@
 
     <nav>
         <ul>
-			<li><a class="active" href="index.html">This page</a></li>
-            <li><a href="Games.html">Page 2</a></li>
-            <li><a href="AboutUs.html">Page 3</a></li>
+			<li><a class="active" href=".">Welcome</a></li>
+            <li><a href="Games.html">About Us</a></li>
+            <li><a href="AboutUs.html">Contact Us</a></li>
             <li><a href="Blog.html">Page 4</a></li>
             <li><a href="Store.html">Page 5</a></li>
         </ul>
@@ -48,61 +48,61 @@
 				<input type="radio" name="radio-btn" id="radio5">
 
 				<div class="slide first">
-					<img class="slide1" src="Images/blank.jpg" alt="slide1" max width="700">
-						<div class="slide1-text">
-							<h2>Slide 1 heading</h2>
-							<p>Text</p>
-							<div>
-								<a href="Games.html"><button class="slide-button" type="button">Button Text</button></a>
-							</div>
+					<img class="slideImg" src="Images/blank.jpg" alt="slide1">
+					<div class="slideText">
+						<h2>Slide 1 heading</h2>
+						<p>Text</p>
+						<div>
+							<a href="Games.html"><button class="slide-button" type="button">Button Text</button></a>
 						</div>
+					</div>
+				</div>
+				<!--
+				<div class="slide">
+					<img class="slideImg" src="Images/blank.jpg" alt="slide2">
+					<div class="slideText">
+						<h2>Slide 2 heading</h2>
+						<p>Text</p>
+						<div>
+							<a href="Blog.html"><button class="slide-button" type="button">Button Text</button></a>
+						</div>
+					</div>
 				</div>
 
-				<div class="slide">
-					<img class="slide2" src="Images/blank.jpg" alt="slide2" max width="700" height="442">
-						<div class="slide2-text">
-							<h2>Slide 2 heading</h2>
-							<p>Text</p>
-							<div>
-								<a href="Blog.html"><button class="slide-button" type="button">Button Text</button></a>
-							</div>
+				<div class="slide three">
+					<img class="slideImg" src="Images/blank.jpg" alt="slide3">
+					<div class="slideText">
+						<h2>Slide 3 heading</h2>
+						<h3>Text</h3>
+						<p>Additional Text<br>more text</p>
+						<div>
+							<a href="Store.html"><button class="slide-button" type="button">Button Text</button></a>
 						</div>
+					</div>
 				</div>
 
-				<div class="slide">
-					<img class="slide3" src="Images/blank.jpg" alt="slide3" max width="700" height="442">
-						<div class="slide3-text">
-							<h2>Slide 3 heading</h2>
-							<h3>Text</h3>
-							<p>Additional Text<br>more text</p>
-							<div>
-								<a href="Store.html"><button class="slide-button" type="button">Button Text</button></a>
-							</div>
+				<div class="slide four">
+					<img class="slideImg" src="Images/blank.jpg" alt="slide3">
+					<div class="slideText">
+						<h2>Slide 4 heading</h2>
+						<h3>Text</h3>
+						<p>Additional Text</p>
+						<div>
+							<a href="Store.html"><button class="slide-button" type="button">Button Text</button></a>
 						</div>
+					</div>
 				</div>
 
-				<div class="slide">
-					<img class="slide4" src="Images/blank.jpg" alt="slide3" max width="700" height="442">
-						<div class="slide4-text">
-							<h2>Slide 4 heading</h2>
-							<h3>Text</h3>
-							<p>Additional Text</p>
-							<div>
-								<a href="Store.html"><button class="slide-button" type="button">Button Text</button></a>
-							</div>
+				<div class="slide five">
+					<img class="slideImg" src="Images/blank.jpg" alt="slide4">
+					<div class="slideText">
+						<h2>Slide 5 heading</h2>
+						<p>Text</p>
+						<div>
+							<a href="AboutUs.html"><button class="slide-button"type="button">Button Text</button></a>
 						</div>
-				</div>
-
-				<div class="slide">
-					<img class="slide5" src="Images/blank.jpg" alt="slide4" max width="700" height="442">
-						<div class="slide5-text">
-							<h2>Slide 5 heading</h2>
-							<p>Text</p>
-							<div>
-								<a href="AboutUs.html"><button class="slide-button"type="button">Button Text</button></a>
-							</div>
-						</div>
-				</div>
+					</div>
+				</div> -->
 				
 				<input type="radio" name="radio-btn" id="radio1" checked>
 
@@ -160,7 +160,7 @@
 		});
 
 		// Add event listener to reset slideshow after last slide has finished
-		const slides = document.querySelector('.slides');
+		const slides = document.querySelector('.slide');
 		slides.addEventListener('transitionend', function() {
 		const lastRadio = document.getElementById('radio5');
 		if (lastRadio.checked) {
