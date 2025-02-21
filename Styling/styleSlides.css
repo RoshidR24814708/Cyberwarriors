@@ -1,7 +1,18 @@
 /* Slideshow Styles */
+.demoWrapper {
+	padding: 10px;
+	background: white;
+	box-sizing: border-box;
+	resize: horizontal;
+	overflow: auto;
+	max-width: 100%;
+	height: calc(50vh - 16px);
+  }
+
 .slider {
-	width: 900px;
-	height: 500px;
+	width: 100%;
+  	padding-bottom: 56.25%;
+	height: 2%;
 	border-radius: 10px;
 	overflow: hidden;
 	margin-left: auto;
@@ -41,7 +52,8 @@
 	padding: 60px;
 	color: #fff;
 	text-align: center;
-	margin-top: -50%;
+	position: relative;
+	top: -100%;
 }
 
 .slide-button {
