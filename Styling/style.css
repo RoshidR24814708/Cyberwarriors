@@ -57,62 +57,6 @@ header h1 {
     transform: scale(1.2);
 }
 
-/* Navigation Styles */
-nav {
-    width: 80%;
-    margin: auto;
-    border-radius: 2.47vw;
-    outline: none;
-    border: 4px solid black;
-    background-color: #24793e;
-    border-radius: 25px;
-    box-shadow: 0 0 5px;
-}
-
-a {
-	color: #1c1c1c;
-	text-decoration: none;
-}
-
-nav ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	display: flex;
-    justify-content: space-between;
-}
-
-nav li {
-    padding-right: 5vw;
-    border-right: 2px solid #000000;
-    height: 100%;
-}
-
-nav li:first-child {
-    padding-left: 60px;
-    padding-right: 50px;
-}
-
-nav li:last-child {
-	margin-right: 0;
-    border-right: none;
-    padding-right: 60px;
-}
-
-nav a {
-	font-size: 28px;
-	font-weight: bold;
-	font-family: 'Nunito', sans-serif;
-}
-
-li a:hover:not(.active) {
-	color: grey
-}
-
-.active {
-	color:#ffffff
-}
-
 @font-face {
 	font-family: 'Nunito';
 	src: url('Fonts//Nunito/Nunito-VariableFont_wght.ttf');
