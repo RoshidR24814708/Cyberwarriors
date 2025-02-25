@@ -110,56 +110,16 @@ h2, h3, h4, p {
 	margin-bottom: 40px;
 }
 
-.navigation-manual {
-	position: absolute;
-	width: 900px;
-	margin-top: -40px;
-	display: flex;
-	justify-content: center;
-}
 
-.manual-btn {
-	border: 2px solid green;
-	padding: 5px;
-	border-radius: 10px;
-	cursor: pointer;
-	transition: 0.5s;
-}
 
-.manual-btn:not(:last-child) {
-	margin-right: 40px;
-}
 
-.manual-btn:hover {
-	background: #24793e;
-}
-
-#radio1:checked ~ .first {
-	margin-left: 0;
-}
-
-#radio2:checked ~ .first {
-	margin-left: -20%;
-}
-
-#radio3:checked ~ .first {
-	margin-left: -40%;
-}
-
-#radio4:checked ~ .first {
-	margin-left: -60%;
-}
-
-#radio5:checked ~ .first {
-	margin-left: -80%;
-}
 
 .navigation-auto {
 	position: absolute;
 	display: flex;
-	width: 900px;
+	width: 100%;
 	justify-content: center;
-	margin-top: 460px;
+	margin: auto;	
 }
 
 .navigation-auto div {
