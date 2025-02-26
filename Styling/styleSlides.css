@@ -121,8 +121,9 @@
 
 .imgs_slides {
 	width: 500%;
-	height: 500px;
+	height: 100%;
 	display: flex;
+	margin: auto;
 }
 
 /* We have to set display: none;
@@ -133,13 +134,17 @@
 }
 
 .slide {
-	width: 20%;
+	height: 100%;
 	transition: 2s;
 	background-color: #000000;
+	align-content: center;
+	overflow: none;
 }
 
-.slide p {
+.slide > * {
 	color: white;
+	text-align: center;
+	width: 100%;
 }
 
 .slide img {
@@ -149,12 +154,12 @@
 
 /* css for slide navigation */
 .navigation {
-	position: absolute;
-	width: 100%;
+	width: 20%;
 	margin: auto;
-	margin-top: -40px;
 	display: flex;
 	justify-content: center;
+	position: relative;
+	top: 10px;
 }
 
 .navigation-btn {
@@ -173,12 +178,6 @@
 	background: #24793e;
 }
 
-/* The checked attribute is used with
-reference to <input type="radio">, 
-when radio button is clicked the 
-class will shift w.r.t  left margin 
-as mentioned which results in image 
-slider */
 #radio1:checked~.first {
 	margin-left: 0;
 }
