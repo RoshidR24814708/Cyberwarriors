@@ -46,3 +46,9 @@ li a:hover:not(.active) {
         font-size: 18px;
     }
 }
+
+@media screen and (max-width: 520px) {
+	nav a {
+        font-size: 12px;
+    }
+}
