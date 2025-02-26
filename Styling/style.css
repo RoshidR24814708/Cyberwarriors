@@ -202,6 +202,19 @@ h2, h3, h4, p {
 	background-color: darkgreen;
 }
 
+@media screen and (max-width: 800px) {
+	#featured-games > * > * {
+		font-size: 12px;
+	}
+
+	#featured-games > .game > .button2 {
+		padding: 10px;
+		height: auto;
+		font-size: 8px;
+	}
+	
+}
+
 #browse h2 { 
 	font-size: 30px;
 	margin-top: 0;
