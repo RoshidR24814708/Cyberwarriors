@@ -35,7 +35,7 @@ const manualButtons = document.querySelectorAll('.manual-btn');
 		// Add event listener to reset slideshow after last slide has finished
 		const slides = document.querySelector('.slide');
 		slides.addEventListener('transitionend', function() {
-		const lastRadio = document.getElementById('radio2');
+		const lastRadio = document.getElementById('radio1');
 		if (lastRadio.checked) {
 			// If last slide is finished, delay reset to the first slide by 5 seconds (5000 milliseconds)
 			setTimeout(() => {

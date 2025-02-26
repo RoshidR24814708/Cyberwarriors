@@ -1,13 +1,4 @@
 /* Slideshow Styles */
-.slider {
-	width: 900px;
-	height: 500px;
-	border-radius: 10px;
-	overflow: hidden;
-	margin-left: auto;
-	margin-right: auto;
-}
-
 .slides {
 	width: 500%;
 	height: 500px;
@@ -41,7 +32,8 @@
 	padding: 60px;
 	color: #fff;
 	text-align: center;
-	margin-top: -50%;
+	position: relative;
+	top: -100%;
 }
 
 .slide-button {
@@ -87,4 +79,121 @@
 
 .slide-button:hover::after {
 	width: 0;
+}
+
+/*Slide Radio Buttons*/
+.navigation-manual {
+	position: relative;
+	margin: auto;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.manual-btn {
+	border: 2px solid green;
+	padding: 5px;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: 0.5s;
+	margin: auto;
+}
+
+.manual-btn:not(:last-child) {
+	margin-right: 40px;
+}
+
+.manual-btn:hover {
+	background: #24793e;
+}
+
+.slider {
+	width: 70%;
+	height: auto;
+	border-radius: 10px;
+	overflow: hidden;
+	margin: auto;
+	box-shadow: 5px 10px #888888;
+	border: 2px solid black;
+	aspect-ratio: 16 / 9;
+
+}
+
+.imgs_slides {
+	width: 500%;
+	height: 100%;
+	display: flex;
+	margin: auto;
+}
+
+/* We have to set display: none;
+  If not, all of our images would 
+  be visible at the same time */
+.imgs_slides input {
+	display: none;
+}
+
+.slide {
+	height: 100%;
+	transition: 2s;
+	background-color: #000000;
+	align-content: center;
+	overflow: none;
+}
+
+.slide > * {
+	color: white;
+	text-align: center;
+	width: 100%;
+}
+
+.slide img {
+	width: 800px;
+	height: 500px;
+}
+
+/* css for slide navigation */
+.navigation {
+	width: 20%;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	position: relative;
+	top: 10px;
+}
+
+.navigation-btn {
+	border: 2px solid #24793e;
+	padding: 5px;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.navigation-btn:not(:last-child) {
+	margin-right: 40px;
+}
+
+.navigation-btn:hover {
+	background: #24793e;
+}
+
+#radio1:checked~.first {
+	margin-left: 0;
+}
+
+#radio2:checked~.first {
+	margin-left: -20%;
+}
+
+#radio3:checked~.first {
+	margin-left: -40%;
+}
+
+#radio4:checked~.first {
+	margin-left: -60%;
+}
+
+#radio5:checked~.first {
+	margin-left: -80%;
 }
