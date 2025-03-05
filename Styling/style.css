@@ -1,5 +1,5 @@
 body {
-	font-family: Arial, sans-serif;
+	font-family: 'Nunito', sans-serif;
 	margin: 0;
 	padding: 0;
 	background-image: url("Images/background.jpg");
@@ -21,7 +21,6 @@ body {
 header {
 	background-color: #1a1e1b;
 	padding-bottom: 10px;
-	display: flex;
 	justify-content: space-between;
 	margin-bottom: 15px;
 }
@@ -47,6 +46,8 @@ header h1 {
 	display: flex;
 	align-items: center;
 	padding-top: 20px;
+	justify-content: flex-end;
+	align-items: right;
 }
 
 .right-section img {
@@ -58,9 +59,32 @@ header h1 {
     transform: scale(1.2);
 }
 
+.image {
+	display: block; 
+	margin: auto; 
+	border: 2px solid black; 
+	width: 80%; 
+	height: auto;
+}
+
+.second {
+	opacity: 0;
+	margin-top: 40px;
+	height: 1px;
+}
+
 @media screen and (max-width: 800px) {	 
 	header {
 		height: 125px;
+	}
+	
+	.first {
+		opacity: 0;
+	}
+
+	.second {
+		opacity: 1;
+		height: auto;
 	}
 
 	.right-section {
