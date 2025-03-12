@@ -10,6 +10,11 @@ ol > img {
 
 }
 
+section {
+    width: 60%; 
+    margin: auto;
+}
+
 
 
 @media screen and (max-width: 600px) {	
@@ -19,6 +24,10 @@ ol > img {
 
     ol > img {
         margin-left: -25%;
+    }
+
+    section {
+        width: 80%;
     }
 
     
