@@ -19,10 +19,18 @@ body {
 
 /* Header Styles */
 header {
-	background-color: #1a1e1b;
-	padding-bottom: 10px;
-	justify-content: space-between;
-	margin-bottom: 15px;
+    height: 120px;
+    background-color: #1a1e1b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px 20px 30px;
+	margin-bottom: 20px;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
 }
 
 header h1 {
@@ -34,8 +42,8 @@ header h1 {
 }
 
 .left-section img {
-	padding: 15px;
-	padding-top: 5px;
+	height: 200px;
+	width: auto;
 }
 
 .left-section img:hover {
@@ -52,6 +60,8 @@ header h1 {
 
 .right-section img {
 	margin-right: 10px;
+	height: 50px;
+	width: auto;
 }
 
 .right-section .social-icon:hover {
@@ -88,12 +98,16 @@ header h1 {
 	}
 
 	.right-section {
-		display: none;
+		display: flex;
+        justify-content: flex-end;
+        width: auto;
+        padding-top: 20px;
 	}
 
 	.left-section {
-		margin: auto;
-		align-content: center;
+		margin-left: 0;
+        margin-right: 0;
+        text-align: left;
 	}
 
 	.left-section a img{
