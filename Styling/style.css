@@ -255,6 +255,14 @@ footer {
 	text-decoration: underline;
 }
 
+
+@media screen and (max-width: 600px) {
+	.right-section {
+		display: none;
+	}
+}
+
+
 @media screen and (max-width: 800px) {
 	h2 {
 		font-size: smaller;

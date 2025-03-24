@@ -149,13 +149,6 @@
 	display: none;
 }
 
-.slide {
-	height: 100%;
-	transition: 2s;
-	background-color: #000000;
-	align-content: center;
-	overflow: none;
-}
 
 .slide > * {
 	text-align: center;
@@ -206,4 +199,10 @@
 
 #radio5:checked~.first {
 	margin-left: -80%;
+}
+
+@media screen and (max-width: 360px) {
+	.slide > * {
+		font-size: x-small;
+	}
 }
